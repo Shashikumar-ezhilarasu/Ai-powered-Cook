@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Implementation Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #2c3e50;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding: 20px 0;
+            color: white;
+        }
+        .logo {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #34495e;
+            margin-bottom: 20px;
+        }
+        .logo h2 {
+            margin: 0;
+            color: #ecf0f1;
+        }
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-links li {
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+        .nav-links li:hover {
+            background-color: #34495e;
+        }
+        .nav-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        .nav-links i {
+            width: 20px;
+            text-align: center;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .concept-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 4px solid #3498db;
+        }
+        .concept-title {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .concept-description {
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+        .implementation-details {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .future-enhancements {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+        .summary-table th, .summary-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .summary-table th {
+            background-color: #f2f2f2;
+            color: #2c3e50;
+        }
+        .summary-table tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <h2>Cook Assistant</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="recipe_recommender.html"><i class="fas fa-utensils"></i>Recipe Recommender</a></li>
+            <li><a href="ai_implementation.html"><i class="fas fa-robot"></i>AI Implementation</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i>About</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <h1>AI/ML Concepts in Cook Assistant</h1>
+
+            <div class="concept-card">
+                <div class="concept-title">1. Natural Language Understanding (NLU)</div>
+                <div class="concept-description">
+                    Understanding user input like ingredients, cuisine type, and dietary preferences.
+                </div>
+                <div class="implementation-details">
+                    <strong>Current Implementation:</strong>
+                    <ul>
+                        <li>Input parsing logic accepts unstructured or semi-structured user data</li>
+                        <li>Handles ingredients lists like ["tomato", "chicken", "basil"]</li>
+                        <li>Processes preferences like ["low-carb", "gluten-free"]</li>
+                    </ul>
+                </div>
+                <div class="future-enhancements">
+                    <strong>Future Enhancements:</strong>
+                    <ul>
+                        <li>Integration with NLP libraries (spaCy, HuggingFace Transformers)</li>
+                        <li>OpenAI API integration for natural text understanding</li>
+                        <li>Support for complex queries like "Make me a quick Italian dinner without dairy"</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <div class="concept-title">2. Rule-based AI (Expert Systems)</div>
+                <div class="concept-description">
+                    AI logic built using human domain knowledge and culinary expertise.
+                </div>
+                <div class="implementation-details">
+                    <strong>Current Implementation:</strong>
+                    <ul>
+                        <li>Recipe templates with cuisine-specific rules</li>
+                        <li>Common ingredients database</li>
+                        <li>Typical cooking instructions</li>
+                        <li>Standardized measurement units</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <div class="concept-title">3. Procedural Generation</div>
+                <div class="concept-description">
+                    Creating semi-random outputs with constraints for recipe variations.
+                </div>
+                <div class="implementation-details">
+                    <strong>Current Implementation:</strong>
+                    <ul>
+                        <li>Randomized ingredient quantities</li>
+                        <li>Dynamic cooking time ranges</li>
+                        <li>Variable difficulty levels</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <div class="concept-title">4. Nutritional Prediction</div>
+                <div class="concept-description">
+                    Simulating nutrition calculations based on ingredients and portions.
+                </div>
+                <div class="implementation-details">
+                    <strong>Current Implementation:</strong>
+                    <ul>
+                        <li>Basic calorie estimation</li>
+                        <li>Macronutrient calculations</li>
+                    </ul>
+                </div>
+                <div class="future-enhancements">
+                    <strong>Future Enhancements:</strong>
+                    <ul>
+                        <li>Integration with nutrition databases (Edamam, USDA FoodData Central)</li>
+                        <li>Accurate macro calculations</li>
+                        <li>Allergen detection</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <div class="concept-title">5. Machine Learning Integration</div>
+                <div class="concept-description">
+                    Potential for advanced ML model integration.
+                </div>
+                <div class="future-enhancements">
+                    <strong>Future Enhancements:</strong>
+                    <ul>
+                        <li>Recommendation systems based on user history</li>
+                        <li>Transformer models for natural language generation</li>
+                        <li>Computer vision for ingredient recognition</li>
+                        <li>Dietary matching models</li>
+                    </ul>
+                </div>
+            </div>
+
+            <table class="summary-table">
+                <tr>
+                    <th>AI/ML Concept</th>
+                    <th>Implementation in Cook Assistant</th>
+                </tr>
+                <tr>
+                    <td>Natural Language Understanding</td>
+                    <td>Understanding ingredients, cuisines, and preferences</td>
+                </tr>
+                <tr>
+                    <td>Rule-based AI</td>
+                    <td>Cuisine-specific templates and logic</td>
+                </tr>
+                <tr>
+                    <td>Procedural Generation</td>
+                    <td>Random cooking time, instructions, and units</td>
+                </tr>
+                <tr>
+                    <td>Nutrition Estimation</td>
+                    <td>Mock calorie and macro generation</td>
+                </tr>
+                <tr>
+                    <td>ML-ready Architecture</td>
+                    <td>Easy to plug in future models for smart predictions</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html> 
