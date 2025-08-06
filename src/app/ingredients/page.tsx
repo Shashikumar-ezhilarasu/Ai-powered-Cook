@@ -5,7 +5,7 @@ import { collection, addDoc, getDocs, updateDoc, deleteDoc, doc } from 'firebase
 import { db } from '@/lib/firebase'
 import { motion } from 'framer-motion'
 import toast from 'react-hot-toast'
-import { FaPlus, FaEdit, FaTrash } from 'react-icons/fa'
+import { FaPlus, FaEdit, FaTrash } from 'react-icons/fa' 
 
 interface Ingredient {
   id: string
